@@ -21,6 +21,10 @@ else
   yum -y install kea
   echo "[OK] Kea DHCP instalado."
 fi
+sleep 1
+
+#LIMPAR CONSOLA ANTES DA CONFIGURACAO DO DHCP SERVER
+clear
 
 # Caminho do ficheiro de configuração do Kea
 KEA_CONF="/etc/kea/kea-dhcp4.conf"
@@ -202,4 +206,5 @@ firewall-cmd --reload
 echo "[OK] Porta 67/UDP aberta na firewall."
 
 echo "==== Configuração DHCP concluída com sucesso! ===="
+
 
