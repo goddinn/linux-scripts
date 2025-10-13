@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 set -euo pipefail
 
@@ -202,3 +202,4 @@ firewall-cmd --reload
 echo "[OK] Porta 67/UDP aberta na firewall."
 
 echo "==== Configuração DHCP concluída com sucesso! ===="
+
