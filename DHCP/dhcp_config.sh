@@ -207,5 +207,5 @@ echo "[OK] Porta 67/UDP aberta na firewall."
 
 echo "==== Configuração DHCP concluída com sucesso! ===="
 
-
+systemctl restart kea-dhcp4
 
