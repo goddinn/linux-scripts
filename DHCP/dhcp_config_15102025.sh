@@ -34,7 +34,7 @@ else
   echo "[INFO] Nenhum ficheiro existente para backup."
 fi
 
-#LIMPAR CONSOLA ANTES DA CONFIGURACAO DO DHCP SERVER
+#Limpar consola antes de começar o setup
 clear
 
 # Função de input validado
@@ -208,4 +208,4 @@ echo "[OK] Porta 67/UDP aberta na firewall."
 echo "==== Configuração DHCP concluída com sucesso! ===="
 
 systemctl restart kea-dhcp4
-
+systemctl status kea-dhcp4

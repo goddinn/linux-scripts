@@ -34,7 +34,7 @@ else
   echo "[INFO] Nenhum ficheiro existente para backup."
 fi
 
-#LIMPAR CONSOLA ANTES DA CONFIGURACAO DO DHCP SERVER
+#Limpar consola antes de começar o setup
 clear
 
 # Função de input validado
@@ -72,7 +72,7 @@ while true; do
   request_input GATEWAY "Gateway da rede"
   request_input DNS "DNS (um ou mais, separados por vírgula)"
 
-  echo "=========================================================="
+    echo "=========================================================="
     echo "Resumo das configurações:"
     echo "- Interface:            $NIC"
     echo "- IP estático:          $STATIC_IP/$PREFIX"
@@ -208,4 +208,4 @@ echo "[OK] Porta 67/UDP aberta na firewall."
 echo "==== Configuração DHCP concluída com sucesso! ===="
 
 systemctl restart kea-dhcp4
-
+systemctl status kea-dhcp4
