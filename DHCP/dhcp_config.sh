@@ -1,4 +1,14 @@
 #!/bin/bash
+# ===============================================================
+# Script: config_dhcp.sh
+# Descrição:
+# Instala e configura servidor DHCP (kea-dhcp4) no CentOS Stream 10.
+# Pede interativamente o estabelecimento de IP Fixo do servidor,
+# configuração completa do ficheiro de DHCP com ranges de IP's,
+# cria backups de configurações anteriores, valida configurações,
+# ajusta firewall e SELinux.
+# ===============================================================
+
 
 set -euo pipefail
 
