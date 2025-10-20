@@ -154,8 +154,11 @@ firewall-cmd --runtime-to-permanent
 firewall-cmd --reload
 
 # Mostra o estado final do serviço FTP e reinicia o servico 
-systemctl status vsftpd
 systemctl restart vsftpd
+systemctl start vsftpd
+echo "[INFO] A obter estado do serviço vsftpd"
+sleep 2
+systemctl status vsftpd
 
 # Criacao de variavel onde mostra o IP da primeira placa de rede onde foi instalado o servidor FTP (removido o CIDR pois criava erro)
 HOST="$(ip -4 -o addr show ens160 | awk '/inet /{print $4; exit}' | cut -d/ -f1)"
